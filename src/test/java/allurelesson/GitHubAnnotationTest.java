@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 
 public class GitHubAnnotationTest {
-    private final static String BASE_URL = "https://github.com";
+
     private final static String REPOSITORY = "allure-framework/allure2";
     private final static String ISSUE_NAME = "Can not generate Allure Reports on Jenkins";
 
@@ -14,7 +14,7 @@ public class GitHubAnnotationTest {
     public void searchForIssue(){
         final WebSteps steps = new WebSteps();
 
-        steps.openMainPage(BASE_URL);
+        steps.openMainPage();
         steps.goToRepository(REPOSITORY);
         steps.goToIssue();
         steps.checkTitleIssue(ISSUE_NAME);
